@@ -1,5 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox")
 require("hardhat-deploy")
+require("@nomiclabs/hardhat-etherscan")
 require("dotenv").config()
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -31,6 +32,7 @@ module.exports = {
         outputFile: "gas-report.txt",
         noColors: true,
         coinmarketcap: COINMARKETCAP_API_KEY,
+        token: "MATIC",
     },
     solidity: {
         compilers: [
