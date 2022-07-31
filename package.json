@@ -16,9 +16,15 @@
     "hardhat-deploy": "^0.9.29",
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.7.21",
-    "typechain": "^8.1.0"
-  },
-  "dependencies": {
+    "typechain": "^8.1.0",
     "dotenv": "^16.0.1"
+  },
+  "scripts": {
+    "test": "yarn hardhat test",
+    "test:staging": "yarn hardhat test --network rinkeby",
+    "lint": "solhint 'contracts/*.sol'",
+    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "format": "prettier --write .",
+    "coverage": "hardhat coverage"
   }
 }
